@@ -1,8 +1,11 @@
-require ('./index.css');
-require('common/logo');
-require('common/footer');
+require('pages/common/nav');
+require('pages/common/search');
+require('pages/common/footer');
+require('./index.css');
+
 var _util = require('util');
-var _user = require('service/user.js');
+var _user = require('service/user');
+var _side = require('pages/common/side');
 var formError={
 	show:function(msg){
 		$('.error-item')
@@ -20,6 +23,7 @@ var formError={
 var page={
 	init:function(){
 		this.bindEvent();
+		this.onload();
 		return this
 	},
 	bindEvent:function(){
@@ -28,16 +32,18 @@ var page={
 			_this.submit()
 		})
 	},
+	onload:function(){
+		_side.render('user_update_password')
+	},
 	submit:function(){
 		var formDate={
-				username:$('[name = "username"]').val(),
 				password:$('[name="password"]').val()	
 			}
 		var validataResult = this.validate(formDate);
 		if(validataResult.status){
 			formError.hide();
-			_user.login(formDate,function(result){
-				window.location.href='/'
+			_user.updatePassword(formDate,function(result){
+				window.location.href='./user_center.html'
 			},function(msg){
 				formError.show(msg)
 			})
@@ -49,14 +55,6 @@ var page={
 		var result= {
 			status:false,
 			msg:''
-		}
-		if(!_util.validate(formDate.username,'require')){
-			result.msg='用户名不能为空';
-			return result
-		}
-		if(!_util.validate(formDate.username,'username')){
-			result.msg='用户名格式错误';
-			return result
 		}
 		if(!_util.validate(formDate.password,'require')){
 			result.msg='密码不能为空';
@@ -70,6 +68,7 @@ var page={
 		result.status = true;
 		return result	
 	}
+	
 }
 $(function(){
 	page.init()

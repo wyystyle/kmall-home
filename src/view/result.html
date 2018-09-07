@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%=require("html-loader!./common/header.html")  %>
+	<title>
+		<%= htmlWebpackPlugin.options.title %> —KMALL 电商网站
+	</title>
+</head>
+<body>
+	<%=require("html-loader!./common/logo.html")  %>
+
+<div class="result">
+	<div class="container">
+		<div class="result-box default hide">
+			<h2 class="title">操作成功</h2>
+			<div class="btns">
+				<a href="/" class="btn">返回首页</a>
+		</div>
+	</div>
+		<div class="result-box add hide">
+			<h2 class="title">添加商品成功</h2>
+			<div class="btns">
+				<a href="/" class="btn">返回首页</a>
+				<a href="./userlogin.html" class="btn">去登陆</a>
+			</div>
+		</div>
+</div>
+	<%=require("html-loader!./common/footer.html")  %>	
+</body>
+</html>

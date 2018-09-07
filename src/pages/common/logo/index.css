@@ -1,0 +1,90 @@
+.log-box{
+	background: #fff;
+	padding: 10px;
+}
+.log-text{
+	color: red;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+ .form-box{
+	width: 350px;
+	max-height:600px;
+	border: 1px solid #fdfdfd;
+	margin: 100px auto;
+	padding: 20px;
+	background: #fff;
+} 
+.form-box .title{
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.form-box .error-item{
+	width: 100%;
+	border: 1px solid red;
+	color: red;
+	margin-bottom: 30px;
+}
+.form-box .error-msg{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+}
+.form-box .error-item i{
+	padding-left: 10px;
+}
+.form-box .form-item{
+	margin-bottom: 30px;
+	border: 1px solid #ccc;
+}
+.form-box .form-lable{
+	display: inline-block;
+	background-color: #666;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}
+.form-box .form-content{
+	width: 300px;
+	height: 30px;	
+	line-height: 30px;
+	border: none;
+	padding-left: 10px;
+	outline: none;
+	box-sizing: border-box;	
+}
+.form-box .user-item{
+	margin-bottom: 30px;
+}
+.form-box .btn-item{
+	height: 40px;
+	line-height: 40px;
+	background: red;
+	color: #fff;
+	border: 1px solid #fff;
+	margin: 30px auto;
+	text-align: center;
+}
+.form-box .btn-item a{
+	text-decoration: none;
+	width: 100%;
+}
+.form-box .btn-item a:hover{
+	opacity: 0.8;
+}
+.form-box .register-item{
+	text-align: right;
+}
+.form-box .register-item a{
+	text-decoration: none;
+	color: black;
+}
+
+

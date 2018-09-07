@@ -1,0 +1,30 @@
+.user-side{
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+.user-side .side-list{
+	width: 150px;
+	height: 500px;
+	background: #fff;
+	float: left;
+}
+.user-side .side-center{
+	width: 910px;
+	height: 500px;
+	background: #fff;
+	float: left;
+	margin-left: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.side-list .side-item{
+	padding-top: 20px;
+	margin-left: 10px;
+	box-sizing: border-box;
+}
+.side-list .side-item a:hover{
+	color: #ff6700;
+}
+.side-item.active .link{
+	color:red;
+}

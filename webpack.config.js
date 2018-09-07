@@ -5,9 +5,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 
 const publicPath = '/';
-const getHtmlConfig=(name)=>({
+const getHtmlConfig=(name,title)=>({
       template:'./src/view/'+name+'.html',
       filename:name +'.html',
+      title:title,
       inject:true,
       hash:true,
       chunks:['common',name]
@@ -18,7 +19,11 @@ module.exports = {
 	entry:{
         common:'./src/pages/common/index.js',
         index:'./src/pages/index/index.js',
-        userlogin:'./src/pages/userlogin/index.js'
+        userlogin:'./src/pages/userlogin/index.js',
+        user_register:'./src/pages/user_register/index.js',
+        result:'./src/pages/result/index.js',
+        user_center:'./src/pages/user_center/index.js',
+        user_update_password:'./src/pages/user_update_password/index.js'
 		},
     //额外的引用jQuery
    /* externals:{
@@ -35,7 +40,8 @@ module.exports = {
       pages:path.resolve(__dirname,'./src/pages'),
       util:path.resolve(__dirname,'./src/util'),
       node_modules:path.resolve(__dirname,'./node_modules'),
-      common:path.resolve(__dirname,'./src/pages/common')
+      common:path.resolve(__dirname,'./src/pages/common'),
+      service:path.resolve(__dirname,'./src/service')
     }
   },
 	module: {
@@ -72,6 +78,12 @@ module.exports = {
                 presets: ['env','es2015','stage-3']
             }
         }               
+      },
+      {
+        test:/\.tpl$/,
+        use: {
+            loader: 'html-loader'
+        }               
       }, 
 
     ]
@@ -83,10 +95,22 @@ module.exports = {
       filename:'css/[name].css'
     }),
     new HtmlWebpackPlugin(
-    	getHtmlConfig('index')
+    	getHtmlConfig('index','首页')
     ),
     new HtmlWebpackPlugin(
-      getHtmlConfig('userlogin')
+      getHtmlConfig('userlogin','登录')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('user_register','注册')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('result','操作成功')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('user_center','用户中心')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('user_update_password','用户中心')
     )
   ],
   devServer:{

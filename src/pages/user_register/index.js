@@ -23,7 +23,21 @@ var page={
 		return this
 	},
 	bindEvent:function(){
-		var _this=this
+		var _this=this;
+		$('[name = "username"]').on('blur',function(){
+			var username = $(this).val();
+			if(!_util.validate(username,'require')){
+				return
+			}
+			if(!_util.validate(username,'username')){
+				return
+			}
+			_user.checkUsername(username,function(result){
+				formError.hide();
+			},function(msg){	
+				formError.show(msg)
+			})
+		})
 		$('#btn-submit').on('click',function(){
 			_this.submit()
 		})
@@ -31,13 +45,15 @@ var page={
 	submit:function(){
 		var formDate={
 				username:$('[name = "username"]').val(),
-				password:$('[name="password"]').val()	
+				password:$('[name="password"]').val(),	
+				phone:$('[name="phone"]').val(),	
+				email:$('[name="email"]').val()
 			}
 		var validataResult = this.validate(formDate);
 		if(validataResult.status){
 			formError.hide();
-			_user.login(formDate,function(result){
-				window.location.href='/'
+			_user.register(formDate,function(result){
+				window.location.href='/result.html?type=register'
 			},function(msg){
 				formError.show(msg)
 			})
@@ -64,6 +80,14 @@ var page={
 		}
 		if(!_util.validate(formDate.password,'password')){
 			result.msg='密码格式错误';
+			return result
+		}
+		if(!_util.validate(formDate.phone,'phone')){
+			result.msg='手机号格式错误';
+			return result
+		}
+		if(!_util.validate(formDate.email,'email')){
+			result.msg='邮箱格式错误';
 			return result
 		}
 
