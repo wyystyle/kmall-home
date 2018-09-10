@@ -1,0 +1,52 @@
+.sort{
+	margin-top:20px;
+}
+.sort-item{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	float: left;
+	border: 1px solid #666;
+	margin-right: -1px;
+	cursor: pointer;
+	position: relative;
+	user-select: none;
+}
+.sort-item.active{
+	background-color: #f21;
+	border: 1px solid #f21;
+	color: #fff;
+}
+.sort-item .fa-sort-asc{
+	position: absolute;
+	top: 8px;
+}
+.sort-item.asc .fa-sort-desc{
+	color: #666;
+}
+.sort-item.desc .fa-sort-asc{
+	color: #666;
+}
+.product-name{
+	font-size: 10px;
+	color: #f21;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 10px;
+}
+.product-item{
+	float: left;
+	width: 208px;
+	height: 300px;
+	margin-right: 10px;	
+	background-color: #fff;
+	text-align: center;
+}
+.product-item:last-child{
+	margin-right: 0px;
+}
+.product-img{
+	width: 180px;
+	height: 200px;
+	margin-top: 20px;
+}

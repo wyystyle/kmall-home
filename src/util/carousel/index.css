@@ -1,0 +1,10 @@
+.carousel { 
+	position: relative;
+	overflow: auto; 
+}
+.carousel li { 
+	list-style: none; 
+}
+.carousel ul li { 
+	float: left; 
+}

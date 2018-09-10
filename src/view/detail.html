@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%=require("html-loader!./common/header.html")  %>
+	<title>
+		<%= htmlWebpackPlugin.options.title %> —KMALL 电商网站
+	</title>
+</head>
+<body>
+	<%=require("html-loader!./common/nav.html")  %>
+	<%=require("html-loader!./common/search.html")  %>
+		<div class="detail">
+			<div class="container clearfix">
+				<div class="detail-box">
+					<div class="product-intro">
+						<div class="product-img">
+							<div class="product-main-img">
+								<img src="../images/carousel/carousel01.jpg" alt="" class="product-main-img-item">
+							</div>
+							<ul class="product-small-img">
+								<li class="product-small-img-item">
+									<img src="../images/carousel/carousel01.jpg" alt="">
+								</li>
+								<li class="product-small-img-item">
+									<img src="../images/carousel/carousel01.jpg" alt="">
+								</li>
+								<li class="product-small-img-item">
+									<img src="../images/carousel/carousel01.jpg" alt="">
+								</li>
+								<li class="product-small-img-item">
+									<img src="../images/carousel/carousel01.jpg" alt="">
+								</li>
+								<li class="product-small-img-item">
+									<img src="../images/carousel/carousel01.jpg" alt="">
+								</li>
+							</ul>
+						</div>
+						<div class="product-info clearfix">
+								<h2 class="product-name">手机</h2>
+								<p class="product-description">xx</p>
+
+							<div class="product-info-item">
+								<span class="lable">价格:</span>
+								<span class="info">111</span>
+							</div>
+							<div class="product-info-item">
+								<span class="lable">库存:</span>
+								<span class="info">111</span>
+							</div>
+							<div class="product-info-item">
+								<span class="lable">数量:</span>
+								<input type="text" class="count-input" value="0" readonly="value">
+								<span class="count-btn plus">+</span>
+								<span class="count-btn minus">-</span>
+							</div>
+						</div>
+
+					</div>
+					<div class="product-detail">
+						<div class="tab">
+							<ul class="tab-list">
+								<li class="tab-item">商品详情</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<%=require("html-loader!./common/footer.html")  %>
+</body>
+</html>
