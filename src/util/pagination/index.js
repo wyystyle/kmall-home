@@ -8,13 +8,23 @@ var tpl=require('./index.tpl');
 	}
 	Pagination.prototype = {
 		constructor:Pagination,
+		bindEvent:function(){
+			var _this = this;
+				this.$elem.on('click','.page-item',function(){
+					var $this=$(this);
+					if($this.hasClass('active') || $this.hasClass('disabled')){
+						return;	
+					}
+					_this.$elem.trigger('page-change',[$this.data('value')])
+				})
+		},
 		render:function(options){
 			//计算总页数
 			var pages = Math.ceil(options.total / options.pageSize);
 			if(pages<=1){
 				return;
 			}
-			var start=options.current - options.range>1 ?options.current - options.range : 1;
+			var start=options.current - options.range > 1 ? options.current - options.range : 1;
 			var end=options.current + options.range < pages ? options.current + options.range : pages; 
 			var prev = options.current - 1;
 			var next = options.current + 1;
@@ -41,26 +51,19 @@ var tpl=require('./index.tpl');
 				disabled:!hasNext
 			})
 
-
-			var html = _util.render(tpl)
-			this.$elem.html(html)
-		},
-		bindEvent:function(){
-			this.$elem.on('click','.page-item',function(){
-				var _this=$(this);
-				this.$elem.on('click','.page-item',function(){
-					var $this=$(this);
-					_this.trigger('page-change',[$this.data('value')])
-				})
+			
+			var html = _util.render(tpl,{
+				pageArray:pageArray
 			})
+			this.$elem.html(html)
 		}
 	}
-/*	var defaultPageArray={
-		current:options.current,
-		total:options.total,
-		pageSize:options.pageSize,
+	Pagination.DEFAULT={
+		current:1,
+		total:1,
+		pageSize:1,
 		range:3
-	}*/
+	}
 
 	$.fn.extend({
 		pagination:function(fn,options){
@@ -72,6 +75,7 @@ var tpl=require('./index.tpl');
 					$this.data('pagination',pagination)
 				}
 				if(typeof pagination[fn] == 'function'){
+					options=$.extend({},Pagination.DEFAULT,options)
 					pagination[fn](options)
 				}
 			})

@@ -24,6 +24,9 @@ a{
 	text-align: center;
 	font-size: 16px;
 	color: #fff;
+	float: left;
+	background: red;
+	height: 34px;
 }
 .log-text{
 	color: red;

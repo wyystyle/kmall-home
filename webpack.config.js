@@ -25,7 +25,8 @@ module.exports = {
         user_center:'./src/pages/user_center/index.js',
         user_update_password:'./src/pages/user_update_password/index.js',
         list:'./src/pages/list/index.js',
-        detail:'./src/pages/detail/index.js'
+        detail:'./src/pages/detail/index.js',
+        cart:'./src/pages/cart/index.js'
 		},
     //额外的引用jQuery
    /* externals:{
@@ -120,15 +121,25 @@ module.exports = {
     ), 
     new HtmlWebpackPlugin(
       getHtmlConfig('detail','商品详情')
+    ), 
+    new HtmlWebpackPlugin(
+      getHtmlConfig('cart','购物车')
     )
   ],
   devServer:{
   	contentBase:'./dist',
     port:3001,
     historyApiFallback:true,
-    proxy:{
-      "/user":"http://127.0.0.1:3000",
-      changeOrigin:true
+    proxy:
+    {
+      "/user":{
+            target:"http://127.0.0.1:3000",
+            changeOrigin:true
+          },
+      "/cart":{
+            target:"http://127.0.0.1:3000",
+            changeOrigin:true
+          }
     }
   } 
 };

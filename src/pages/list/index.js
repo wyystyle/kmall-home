@@ -24,9 +24,10 @@ var page={
 	},
 	initPagination:function(){
 		var _this = this;
-		var $pagination=$('pagination-box');
+		var $pagination=$('.pagination-box');
 		$pagination.on('page-change',function(e,value){
 			_this.listParams.page=value;
+			_this.loadProductList();
 		})
 		$pagination.pagination();
 	},	
@@ -59,6 +60,7 @@ var page={
 					_this.listParams.orderBy = 'price_desc';
 				}
 			}
+			_this.listParams.page = 1;
 			_this.loadProductList();
 		});
 	},
@@ -68,7 +70,7 @@ var page={
 		: (delete this.listParams.catergoryId);
 
 		_product.getProductList(this.listParams,function(result){
-			console.log(result)
+			/*console.log(result)*/
 			var html=_util.render(tpl,{
 				list:result.list.map(function(product){
 					if(product.images){
@@ -86,7 +88,7 @@ var page={
 				pageSize:result.pageSize
 			})
 		},function(){
-
+			_util.showErrorMsg(msg)
 		})
 	}
 }
