@@ -44,7 +44,7 @@ var page={
 		})
 		$('.detail-box').on('click','.add-cart-btn',function(){
 			_cart.addCart({
-				productId:this.params.productId,
+				productId:_this.params.productId,
 				count:$('.count-input').val()
 			},function(){
 				window.location.href='./result.html?type=addCart'

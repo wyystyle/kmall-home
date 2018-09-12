@@ -8,6 +8,34 @@ var _cart={
 			success:success,
 			error:error
 		})
+	},
+	getCart:function(success,error){
+		_util.request({
+			url:'/cart',
+			success:success,
+			error:error
+		})
+	},
+	selectOne:function(data,success,error){
+		_util.request({
+			url:'/cart/selectOne',
+			method:'put',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	unselectOne:function(data,success,error){
+		_util.request({
+			url:'/cart/unselectOne',
+			method:'put',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	deleteOne:function(){
+		
 	}
 }
-module.exports=_product
+module.exports=_cart

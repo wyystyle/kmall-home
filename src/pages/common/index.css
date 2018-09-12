@@ -43,5 +43,8 @@ a{
 }
 .empty-message{
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 100px;
+	height: 300px;
+	font-size: 30px;
+	color: #f21;
 }
