@@ -2,6 +2,7 @@ require('./index.css');
 require('common/footer');
 var _user=require('service/user.js');
 var _util=require('util');
+var _cart = require('service/cart')
 var nav ={
 	init:function(){
 		this.bindEvent();
@@ -28,7 +29,11 @@ var nav ={
 		})
 	},
 	loadCartInfo:function(){
-
+		_cart.getCount(function(cart){
+			$('.shop-num').text(cart || 0)
+		},function(){
+			$('.shop-num').text(0)
+		});
 	}
 
 }

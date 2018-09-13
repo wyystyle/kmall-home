@@ -26,7 +26,8 @@ module.exports = {
         user_update_password:'./src/pages/user_update_password/index.js',
         list:'./src/pages/list/index.js',
         detail:'./src/pages/detail/index.js',
-        cart:'./src/pages/cart/index.js'
+        cart:'./src/pages/cart/index.js',
+        orderConfirm:'./src/pages/orderConfirm/index.js'
 		},
     //额外的引用jQuery
    /* externals:{
@@ -124,6 +125,8 @@ module.exports = {
     ), 
     new HtmlWebpackPlugin(
       getHtmlConfig('cart','购物车')
+    ),new HtmlWebpackPlugin(
+      getHtmlConfig('orderConfirm','确认订单')
     )
   ],
   devServer:{
@@ -137,6 +140,14 @@ module.exports = {
             changeOrigin:true
           },
       "/cart":{
+            target:"http://127.0.0.1:3000",
+            changeOrigin:true
+          },
+      "/shipping":{
+            target:"http://127.0.0.1:3000",
+            changeOrigin:true
+          },
+      "/order":{
             target:"http://127.0.0.1:3000",
             changeOrigin:true
           }
