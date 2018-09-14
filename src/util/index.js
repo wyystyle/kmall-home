@@ -26,6 +26,9 @@ var _util={
 	showErrorMsg:function(msg){
 		alert(msg)
 	},
+	showSuccessMsg:function(msg){
+		alert(msg)
+	},
 	confirm:function(msg){
 		return window.confirm(msg)
 	},
@@ -48,6 +51,9 @@ var _util={
 		}
 		if(type ==='email'){
 			return /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(value)
+		}
+		if(type ==='name'){
+			return /^[a-zA-Z0-9_]{3,10}$/.test(value)
 		}
 	},
 	getParamFromUrl:function(key){

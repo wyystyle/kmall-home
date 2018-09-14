@@ -95,7 +95,10 @@
 	color: #666;
 	margin-bottom: 15px;
 }
-
+.pandel-body .product-item .product-count .count-input{
+	user-select: none;
+	border: none;
+}
 .product-item {
 	height: 80px;
 	line-height: 80px;
@@ -179,7 +182,7 @@
 }
 .modal .modal-container{
 	width: 400px;
-	height: 500px;
+	height: 600px;
 	background: #fff;
 	margin:100px auto;
 	padding: 10px;
