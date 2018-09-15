@@ -16,6 +16,14 @@ var _order={
 			success:success,
 			error:error
 		})
+	},
+	getOrderList:function(page,success,error){
+		_util.request({
+			url:'/order/list',
+			data:page,
+			success:success,
+			error:error
+		})
 	}
 }
 module.exports=_order

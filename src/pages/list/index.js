@@ -70,7 +70,6 @@ var page={
 		: (delete this.listParams.catergoryId);
 
 		_product.getProductList(this.listParams,function(result){
-			/*console.log(result)*/
 			var html=_util.render(tpl,{
 				list:result.list.map(function(product){
 					if(product.images){

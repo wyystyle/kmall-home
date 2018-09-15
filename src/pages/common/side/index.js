@@ -5,7 +5,7 @@ var _user = require('service/user.js');
 var tpl = require('./index.tpl');
 var side={
 	list:[
-	{name:'order_list',desc:'我的订单',href:'./order_list.html'},
+	{name:'order_list',desc:'我的订单',href:'./order_list.html?page=1'},
 	{name:'user_center',desc:'个人中心',href:'./user_center.html'},
 	{name:'user_update_password',desc:'修改密码',href:'./user_update_password.html'},
 	],

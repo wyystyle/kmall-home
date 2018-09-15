@@ -17,7 +17,6 @@ var page={
 	},
 	loadUserConent:function(){
 		_user.getUserConent(function(userInfo){
-			console.log(userInfo)
 			var html = _util.render(tpl,userInfo);
 			$('.side-center').html(html)
 		},function(){

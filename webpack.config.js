@@ -23,6 +23,7 @@ module.exports = {
         user_register:'./src/pages/user_register/index.js',
         result:'./src/pages/result/index.js',
         user_center:'./src/pages/user_center/index.js',
+        order_list:'./src/pages/order_list/index.js',
         user_update_password:'./src/pages/user_update_password/index.js',
         list:'./src/pages/list/index.js',
         detail:'./src/pages/detail/index.js',
@@ -113,6 +114,9 @@ module.exports = {
     ),
     new HtmlWebpackPlugin(
       getHtmlConfig('user_center','用户中心')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('order_list','订单列表')
     ),
     new HtmlWebpackPlugin(
       getHtmlConfig('user_update_password','用户中心')

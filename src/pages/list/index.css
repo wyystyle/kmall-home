@@ -1,7 +1,7 @@
 .sort{
 	margin-top:20px;
 }
-.sort-item{
+.sort .sort-item{
 	width: 80px;
 	height: 30px;
 	line-height: 30px;
@@ -13,26 +13,33 @@
 	position: relative;
 	user-select: none;
 }
-.sort-item.active{
+.sort .sort-item.active{
 	background-color: #f21;
 	border: 1px solid #f21;
 	color: #fff;
 }
-.sort-item .fa-sort-asc{
+.sort .sort-item .fa-sort-asc{
 	position: absolute;
 	top: 8px;
 }
-.sort-item.asc .fa-sort-desc{
+.sort .sort-item.asc .fa-sort-desc{
 	color: #666;
 }
-.sort-item.desc .fa-sort-asc{
+.sort .sort-item.desc .fa-sort-asc{
 	color: #666;
 }
-.product-name{
-	font-size: 10px;
-	color: #f21;
-	border-bottom: 2px solid #fff;
-	margin-bottom: 10px;
+.sort .product-item.product-price{
+
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+.product-item .product-name{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
 }
 .product-item{
 	float: left;

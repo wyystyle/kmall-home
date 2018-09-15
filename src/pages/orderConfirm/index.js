@@ -46,7 +46,6 @@ var page={
 			}
 		})
 		this.$shippingBox.on('click','.shipping-edit',function(){
-			var _this = this;
 			var $this = $(this);
 			var shippingId = $this.parents('.shipping-item').data('shipping-id');
 				_shipping.editShippingList({shippingId:shippingId},function(shippings){
@@ -61,7 +60,6 @@ var page={
 			})
 		})
 		this.$shippingBox.on('click','.shipping-item',function(){
-			var _this = this;
 			var $this = $(this);
 			$this.addClass('active')
 			.siblings('.shipping-item').removeClass('active')
@@ -71,6 +69,7 @@ var page={
 		$('.product-box').on('click','.btn-submit',function(){
 			if(_this.data.shippingId){
 				_order.createOrder({shippingId:_this.data.shippingId},function(order){
+					
 					console.log(order);
 					window.location.href='./payment.html?orderNo='+order.orderNo;	
 				},function(){
