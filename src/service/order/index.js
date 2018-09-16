@@ -24,6 +24,23 @@ var _order={
 			success:success,
 			error:error
 		})
+	},
+	getOrderDetail:function(data,success,error){
+		_util.request({
+			url:'/order/detail',
+			data:data,
+			success:success,
+			error:error
+		})
+	},
+	cancelOrder:function(data,success,error){
+		_util.request({
+			url:'/order/cancel',
+			method:'put',
+			data:data,
+			success:success,
+			error:error
+		})
 	}
 }
 module.exports=_order

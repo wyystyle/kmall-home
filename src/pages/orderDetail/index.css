@@ -1,0 +1,13 @@
+.order-list{
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+.side-center .order-title{
+	/* margin-bottom: 10px; */
+}
+.side-center .order-title li{
+	margin-left: 10px;
+}
+.side-center .order-title li:last-child{
+	margin-right: 10px;
+}

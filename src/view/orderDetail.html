@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%=require("html-loader!./common/header.html")  %>
+	<title>
+		<%= htmlWebpackPlugin.options.title %> —KMALL 电商网站
+	</title>
+</head>
+<body>
+	<%=require("html-loader!./common/nav.html")  %>
+	<%=require("html-loader!./common/search.html")  %>
+<div class="order-list clearfix">
+	<div class="container">
+		<%=require("html-loader!./common/side.html")  %>
+	<div class="side-center">
+		
+		
+	</div>
+		
+	</div>
+</div>
+	<%=require("html-loader!./common/footer.html")  %>
+</body>
+</html>

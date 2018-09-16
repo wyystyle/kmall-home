@@ -24,6 +24,8 @@ module.exports = {
         result:'./src/pages/result/index.js',
         user_center:'./src/pages/user_center/index.js',
         order_list:'./src/pages/order_list/index.js',
+        orderDetail:'./src/pages/orderDetail/index.js',
+        payment:'./src/pages/payment/index.js',
         user_update_password:'./src/pages/user_update_password/index.js',
         list:'./src/pages/list/index.js',
         detail:'./src/pages/detail/index.js',
@@ -119,6 +121,12 @@ module.exports = {
       getHtmlConfig('order_list','订单列表')
     ),
     new HtmlWebpackPlugin(
+      getHtmlConfig('orderDetail','订单详情')
+    ),
+    new HtmlWebpackPlugin(
+      getHtmlConfig('payment','支付详情')
+    ),
+    new HtmlWebpackPlugin(
       getHtmlConfig('user_update_password','用户中心')
     ),
     new HtmlWebpackPlugin(
@@ -154,7 +162,11 @@ module.exports = {
       "/order":{
             target:"http://127.0.0.1:3000",
             changeOrigin:true
-          }
+          },
+      "/payment":{
+            target:"http://127.0.0.1:3000",
+            changeOrigin:true
+          }    
     }
   } 
 };

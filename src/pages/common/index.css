@@ -16,7 +16,7 @@ a{
 }
 .btn{
 	display: inline-block;
-	width: 80px;
+	min-width: 80px;
 	height: 30px;
 	line-height: 30px;
 	border-color: red;

@@ -12,9 +12,13 @@ var page={
 		page:_util.getParamFromUrl('page') || 1
 	},
 	init:function(){
-		this.initPagination();	
+		this.initPagination();
+		this.bindEvent();	
 		this.onload();
 		this.loadOrderList();
+	},
+	bindEvent:function(){
+		
 	},
 	initPagination:function(){
 		var _this = this;
