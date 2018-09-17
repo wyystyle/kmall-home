@@ -69,6 +69,8 @@ var page={
 		? (delete this.listParams.keyword)
 		: (delete this.listParams.catergoryId);
 
+		$('.product-list-box').html('<div class="loading"></div>');
+
 		_product.getProductList(this.listParams,function(result){
 			var html=_util.render(tpl,{
 				list:result.list.map(function(product){

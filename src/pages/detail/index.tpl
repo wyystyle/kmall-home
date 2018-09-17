@@ -17,15 +17,15 @@
 
 		<div class="product-info-item">
 			<span class="lable">价格:</span>
-			<span class="info">{{price}}</span>
+			<span class="info">￥{{price}}元</span>
 		</div>
 		<div class="product-info-item">
 			<span class="lable">库存:</span>
-			<span class="info">{{shopnum}}</span>
+			<span class="info">{{shopnum}}件</span>
 		</div>
 		<div class="product-info-item">
 			<span class="lable">数量:</span>
-			<input type="text" class="count-input" value="0" readonly>
+			<input type="text" class="count-input" value="1" readonly>
 			<span class="count-btn plus">+</span>
 			<span class="count-btn minus">-</span>
 		</div>

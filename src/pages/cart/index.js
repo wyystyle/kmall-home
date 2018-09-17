@@ -59,7 +59,6 @@ var page={
 		this.$box.on('click','.delete-one',function(){
 			var $this = $(this);
 			var productId = $this.parents('.cart-item').data('product-id');
-			console.log(productId)
 			if(_util.confirm('您确定删除该条购物车信息吗？')){
 				_cart.deleteOne({productId:productId},function(cart){
 					_this.renderCart(cart);
@@ -117,7 +116,6 @@ var page={
 	loadCart:function(){
 		var _this = this;
 		_cart.getCart(function(cart){
-			console.log('aaa',cart)
 			_this.renderCart(cart)
 		},function(){
 			_this.showPageError();

@@ -7,13 +7,9 @@
 }
 
 
- .form-box{
+ .side-center .form-box{
 	width: 350px;
-	max-height:600px;
-	border: 1px solid #fdfdfd;
-	margin: 100px auto;
-	padding: 20px;
-	background: #fff;
+	max-height:300px;
 } 
 .form-box .title{
 	font-size: 20px;

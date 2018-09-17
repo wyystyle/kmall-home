@@ -262,3 +262,12 @@ a{
 	display: block;
 	margin: 20px auto;
 }
+/* 
+	loding图片样式
+ */
+.loading{
+	width: 200px;
+	height: 200px;
+	background:url(../../images/loading/loading.gif) no-repeat; 
+	margin:20px auto;
+}

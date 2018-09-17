@@ -62,7 +62,7 @@
 			<li class="product-submit">
 				<span class="total-price-text">总价:</span>
 			 	<span class="total-price">￥{{payment}}</span>
-			 	<a href="javascript:;" class="btn btn-submit">去支付</a>
+			 	<a href="./payment.html?orderNo={{orderNo}}" class="btn btn-submit">去支付</a>
 			</li>
 		</ul>
 		{{/list}}

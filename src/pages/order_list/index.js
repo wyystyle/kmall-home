@@ -45,7 +45,6 @@ var page={
 					}
 				})
 				order.creatTime = new Date(order.createdAt).toLocaleString()
-				console.log(order.createdAt)
 				return order
 			})
 			var html = _util.render(tpl,{

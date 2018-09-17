@@ -22,7 +22,10 @@ var page={
 	loadPaymentDetail:function(){
 		var _this = this;
 		_payment.getPaymentInfo(this.params.orderNo,function(payment){
-			var html = _util.render(tpl,payment);
+			var html = _util.render(tpl,{
+				payment:payment,
+				orderNo:_this.params.orderNo
+			});
 			$('.payment-box').html(html);
 			_this.listenPaymentStatus();
 		},function(){
