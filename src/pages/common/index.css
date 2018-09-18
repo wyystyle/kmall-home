@@ -168,7 +168,7 @@ a{
 }
 
 
-.product-info{
+/* .product-info{
 	width: 70%;
 }
 .product-price{
@@ -179,7 +179,7 @@ a{
 }
 .product-totalPrice{
 	width: 10%;
-}
+} */
 
 .product-title {
 	height: 40px;
@@ -266,8 +266,8 @@ a{
 	loding图片样式
  */
 .loading{
-	width: 200px;
-	height: 200px;
-	background:url(../../images/loading/loading.gif) no-repeat; 
+	width: 400px;
+	height: 300px;
+	background:url(../../images/loading/loading.gif) no-repeat center; 
 	margin:20px auto;
 }

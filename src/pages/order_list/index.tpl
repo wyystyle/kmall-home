@@ -48,10 +48,11 @@
 					<span>{{name}}</span>
 			</li>
 			<li class="product-price">
+
 				￥{{price}}
 			</li>
 			<li class="product-count" data-shopnum="{{shopnum}}">
-				<input type="text" value="{{count}}" class="count-input" readonly />
+				{{count}}
 			</li>
 			<li class="product-totalPrice">
 				￥{{totalPrice}}

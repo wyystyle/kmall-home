@@ -1,3 +1,16 @@
+
+.product-info{
+	width: 70%;
+}
+.product-price{
+	width: 10%;
+}
+.product-count{
+	width: 10%;
+}
+.product-totalPrice{
+	width: 10%;
+} 
 .order-list{
 	margin-top: 20px;
 	margin-bottom: 20px;	
